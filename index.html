@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Line Settings and Oil Status  Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="./images/favico.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- Logo -->
+    <div class="logo">
+        <a href="https://rafiqfarmfoods.com/" target="_blank">
+            <img id="logoImg" src="/images/rff.png">
+        </a>
+    </div>
+
+    <!-- Form -->
+    <h1>Line Settings and Oil Status Form</h1>
+    <div id="line"></div>
+    <form id="LineSettingsandOiLStatusForm">
+        <!-- Wapda -->
+             
+          
+
+            <!-- second three -->
+            <div class="RSD">
+                <div class="wrapper">
+                    <label for="RSD">Shift</label>
+                        <input type="time" required min="0" id="wapdaoffpeakend"
+                            name=" Shift for LineSettingForm" required
+                            placeholder="HH:MM">
+                    </div>
+
+                <div class="wrapper">
+                    <label for="RSD">Date</label>
+                    <input type="date" required min="0" id="wapdatotal"
+                        name=" date LineSettingForm" required placeholder="Enter Date">
+                </div>
+            </div>
+            
+
+                <div class="RSD">
+                <div class="wrapper">
+                <label for="RSD">Line Supervisor</label>
+                    <input type="text"  id="wapdaoffpeakend"
+                        name="Line Supervisor LineSettingForm" required
+                        placeholder='Enter name'>
+                </div>
+                <div class="wrapper">
+                    <label for="RSD">Junior Manager</label>
+                    <input type="text"  id="wapdatotalend"
+                        name=" Junior Manager LineSettingForm" required placeholder="Enter name">
+                </div>
+            </div>
+
+                <!-- third three -->
+                <h2>Line Setting</h2>
+                <div class="RSD">
+                    <div class="wrapper">
+                        <label for="RSD">Line Prep Start</label>
+                        
+                            <input type="text" id="gen1Units" name="Line Prep Setting LineSettingForm" required
+                                placeholder="Enter Line Prep Start">
+                    </div>
+
+
+                    <div class="wrapper">
+                        <label for="RSD">Line Prep Complete</label>
+                            <input type="text" id="gen1diesel" name="Line Prep Complete" required
+                                placeholder="Enter Line Prep Complete">
+                    </div>
+                </div>
+
+                    <div class="wrapper">
+                        <label for="RSD"><strong>Cut Size</strong></label>
+                        <select id="size">
+                        <option value="6x6mm cutSize">6x6 mm</option>
+                        <option value="9x9mm cutSize">9x9 mm</option>
+                        <option value="12x12mm cutSize">12x12 mm</option>
+                        </select>
+                    </div>
+                
+
+                        
+                        
+
+                           <div class="wrapper">
+                        <label for="RSD"><strong>Size change during shift</strong></label>
+                        <select id="yesno">
+                            <option value="CutSizeChangeDuringShift yes">Yes</option>
+                            <option value="CutSizeChangeDuringShift no">No</option>
+                        </select>
+                    </div>
+                
+                <h3>If Cutter Blades Replaced</h3>
+                <div class="RSD">
+                            <div class="wrapper">
+                        <label for="RSD">Time</label>
+                            <input type="time" id="gen1diesel" name= "Time If Cutter Blades Replaced" required
+                                 min="0">
+                    </div>
+
+
+                    <div class="wrapper">
+                        <label for="RSD">Blade Code</label>
+                            <input type="number" id="gen1diesel" name= "Blade Code If Cutter Blades Replaced" required
+                                placeholder="Enter Blade Code" min="0">
+                    </div>
+                        </div>
+                        <div class="RSD">
+                            <div class="wrapper">
+                        <label for="RSD">Blade Type</label>
+                            <input type="text" id="gen1diesel" name= "Blade Type If Cutter Blades Replaced" required
+                                placeholder="Enter Blade Type" min="0">
+                    </div>
+
+
+                    <div class="wrapper">
+                        <label for="RSD">Quantity</label>
+                            <input type="number" id="gen1diesel" name= "Quantity If Cutter Blades Replaced" required
+                                placeholder="Enter Quantity" min="0">
+                    </div>
+                        </div>
+                        <h2>Process Waste</h2>
+
+                  <div class="RSD">
+                        <div class="wrapper">
+                                <label for="RSD">Trimming Table(kg)</label>
+                                <input type="number" id="gen1diesel" name= "LineSettingForm Trimming Table(kg)" required
+                                    placeholder="Enter Trimming Table(kg)" min="0">
+                        </div>
+                        <div class="wrapper">
+                            <label for="RSD">Silver remover(kg)</label>
+                                <input type="number" id="gen1diesel" name= "LineSettingForm Silver remover(kg)" required
+                                    placeholder="Enter Silver remover(kg)" min="0">
+                        </div>
+                    </div>
+                    <div class="RSD">
+                        <div class="wrapper">
+                            <label for="RSD">1st Inspection (kg)</label>
+                                <input type="number" id="gen1diesel" name= "LineSettingForm 1st Inspection(kg)" required
+                                    placeholder="Enter 1st Inspection(kg)" min="0">
+                        </div>
+                        <div class="wrapper">
+                            <label for="RSD">Final Inspection(kg)</label>
+                                <input type="number" id="gen1diesel" name= "LineSettingForm 1t Inspection (kg)" required
+                                    placeholder="Enter Final Inspection(kg)" min="0">
+                        </div>
+                    </div>
+                    <label for="RSD">Total(kg)</label>
+                    <input type="number" id="gen1diesel" name= "LineSettingForm Total (kg)" required
+                        placeholder="Enter Total(kg)" min="0">
+            </div>
+            <h2>Manpower Record</h2>
+
+            <div class="RSD">
+                <div class="wrapper">
+                    <label for="RSD">Hopper Area
+                    </label>
+                    
+                        <input type="text" id="gen1Units" name="LineSettingForm Hopper Area" required
+                            placeholder="Enter Hopper Area">
+                        
+                </div>
+                <div class="wrapper">
+                    <label for="RSD">Trimming Convey
+                    </label>
+                    
+                        <input type="text" id="gen1Units" name="LineSettingForm Trimming Convey" required
+                            placeholder="Enter Trimming Convey ">
+                        
+                </div>       
+            </div>
+                <div class="RSD">
+                    <div class="wrapper">
+                        <label for="RSD">1st Inspection conveyor </label>
+                            <input type="text" id="gen1Units" name="LineSettingForm 1st Inspection conveyor" required
+                                placeholder="Enter 1st Inspection Conveyor ">
+                            
+                    </div>
+                   
+                        <div class="wrapper">
+                            <label for="RSD">2nd Inspection conveyor </label>
+                                <input type="text" id="gen1Units" name="LineSettingForm 2nd Inspection conveyor" required
+                                    placeholder="Enter 2nd Inspection Conveyor">
+                                
+                        </div>
+                </div>
+                <div class="RSD">
+                    <div class="wrapper">
+                        <label for="RSD">Packing</label>
+                            <input type="text" id="gen1Units" name="LineSettingForm Packing" required
+                                placeholder="Enter Packing ">
+                            
+                    </div>
+                   
+                        <div class="wrapper">
+                            <label for="RSD">Cleaning</label>
+                                <input type="text" id="gen1Units" name="LineSettingForm Cleaning" required
+                                    placeholder="Enter Cleaning">
+                                
+                        </div>
+                </div>
+                <div class="RSD">
+                    <div class="wrapper">
+                        <label for="RSD">Hygiene</label>
+                            <input type="text" id="gen1Units" name="LineSettingForm Hygiene" required
+                                placeholder="Enter Hygiene ">
+                            
+                    </div>
+                   
+                        <div class="wrapper">
+                            <label for="RSD">Labour Supervisor</label>
+                                <input type="text" id="gen1Units" name="LineSettingForm Labour Supervisor" required
+                                    placeholder="Enter Labour Supervisor">
+                                
+                        </div>
+                </div>
+                <div class="RSD">
+                    <div class="wrapper">
+                        <label for="RSD">Loader </label>
+                            <input type="text" id="gen1Units" name="LineSettingForm Loader" required
+                                placeholder="Enter Loader">
+                            
+                    </div>
+                   
+                        <div class="wrapper">
+                            <label for="RSD">Other </label>
+                                <input type="text" id="gen1Units" name="LineSettingForm Other" required
+                                    placeholder="Enter Other">
+                                
+                        </div>
+                </div>
+
+                        
+
+                       
+                                <input type="submit" value="Submit">
+    </form>
+
+    <!-- spinner html -->
+    <div class="spinner-container">
+        <div class="spinner"></div>
+    </div>
+    <!-- end of spinner html -->
+
+    <!-- Add the modal HTML code -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <p id="modal-message"></p>
+            <button id="closeBtn">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p><a href="https://rafiqfarmfoods.com/" target="_blank">Copyright &copy; Rafiq Farm Foods | All Right
+                Reserved. </a></p>
+    </footer>
+    <!-- end of Footer -->
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzLZTpCS_c9hKLgyDPKwnQ3IfYY3dc1Nd05GaWwORr_LLP5jKzN8zLjK_cq3XH8Z5Xt/exec';
+        const form = document.getElementById("");
+
+        // modal javascript
+        // Get the modal element, the close button, and the close button inside the modal
+        const modal = document.getElementById("myModal");
+        const closeBtn = document.querySelector(".close");
+        const modalCloseBtn = document.getElementById("closeBtn");
+
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            modal.style.display = "block";
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    hideSpinner(); // Hide the spinner
+                    document.getElementById("modal-message").textContent = 'Success!';
+                })
+                .catch(error => {
+                    hideSpinner(); // Hide the spinner
+                    document.getElementById("modal-message").textContent = 'Error! ' + error.message;
+                });
+        });
+        // Close the modal when the close button is clicked
+        closeBtn.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+        // Close the modal when the close button inside the modal is clicked
+        modalCloseBtn.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+
+    </script>
+
+
+    <!-- reseting form after submitting -->
+    <script>
+        document.getElementById('').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            this.reset();
+
+
+
+        });
+
+    </script>
+    <!-- end of for reseting after submitting -->
+
+
+    <script>
+        // Function to show the spinner
+        function showSpinner() {
+            const spinnerContainer = document.querySelector(".spinner-container");
+            spinnerContainer.style.display = "flex";
+            modal.style.display = "none";
+        }
+
+        // Function to hide the spinner
+        function hideSpinner() {
+            const spinnerContainer = document.querySelector(".spinner-container");
+            spinnerContainer.style.display = "none";
+            modal.style.display = "block";
+        }
+
+        // Function to handle form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            showSpinner(); // Show the spinner
+
+        }
+
+        // Add event listener to form submit
+
+        form.addEventListener("submit", handleSubmit);
+    </script>
+    <!-- End of spinner -->
+
+
+
+    <!-- check time validations -->
+    <script>
+        // Get the input element
+        var durationInput = document.getElementById('availability-duration');
+        durationInput.addEventListener('change', function () {
+            durationInput.setCustomValidity('');
+            var value = durationInput.value;
+            var hours = parseInt(value.split(':')[0]);
+            var minutes = parseInt(value.split(':')[1]);
+            if (isNaN(hours) || isNaN(minutes) || minutes >= 60) {
+                durationInput.setCustomValidity('Please enter a valid duration in HH:MM format with hours under 23 and minutes under 60.');
+            }
+        });
+    </script>
+  
+    <script>
+        document.getElementById("size").addEventListener("change", function() {
+            var selectedSize = document.getElementById("size").value;
+            alert("You selected: " + selectedSize);
+        });
+    </script>
+    <script>
+        document.getElementById("yesno").addEventListener("change", function() {
+            var selectedOption = document.getElementById("yesno").value;
+            alert("You selected: " + selectedOption);
+        });
+    </script>
+
+</body>
+
+</html>
