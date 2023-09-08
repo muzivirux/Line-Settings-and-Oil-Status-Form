@@ -29,14 +29,14 @@
                 <div class="wrapper">
                     <label for="RSD">Shift</label>
                         <input type="time" required min="0" id="wapdaoffpeakend"
-                            name=" Shift for LineSettingForm" required
+                            name="Shift" required
                             placeholder="HH:MM">
                     </div>
 
                 <div class="wrapper">
                     <label for="RSD">Date</label>
                     <input type="date" required min="0" id="wapdatotal"
-                        name=" date LineSettingForm" required placeholder="Enter Date">
+                        name="date" required placeholder="Enter Date">
                 </div>
             </div>
             
@@ -45,13 +45,13 @@
                 <div class="wrapper">
                 <label for="RSD">Line Supervisor</label>
                     <input type="text"  id="wapdaoffpeakend"
-                        name="Line Supervisor LineSettingForm" required
+                        name="Line Supervisor" required
                         placeholder='Enter name'>
                 </div>
                 <div class="wrapper">
                     <label for="RSD">Junior Manager</label>
                     <input type="text"  id="wapdatotalend"
-                        name=" Junior Manager LineSettingForm" required placeholder="Enter name">
+                        name="Junior Manager" required placeholder="Enter name">
                 </div>
             </div>
 
@@ -61,7 +61,7 @@
                     <div class="wrapper">
                         <label for="RSD">Line Prep Start</label>
                         
-                            <input type="text" id="gen1Units" name="Line Prep Setting LineSettingForm" required
+                            <input type="text" id="gen1Units" name="Line Prep Setting" required
                                 placeholder="Enter Line Prep Start">
                     </div>
 
@@ -75,10 +75,10 @@
 
                     <div class="wrapper">
                         <label for="RSD"><strong>Cut Size</strong></label>
-                        <select id="size">
-                        <option value="6x6mm cutSize">6x6 mm</option>
-                        <option value="9x9mm cutSize">9x9 mm</option>
-                        <option value="12x12mm cutSize">12x12 mm</option>
+                        <select name"CutSize">
+                        <option value="6x6 mm">6x6 mm</option>
+                        <option value="9x9 mm">9x9 mm</option>
+                        <option value="12x12 mm">12x12 mm</option>
                         </select>
                     </div>
                 
@@ -88,9 +88,9 @@
 
                            <div class="wrapper">
                         <label for="RSD"><strong>Size change during shift</strong></label>
-                        <select id="yesno">
-                            <option value="CutSizeChangeDuringShift yes">Yes</option>
-                            <option value="CutSizeChangeDuringShift no">No</option>
+                        <select id="yesno" name="Cut Size Change During Shift">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
                         </select>
                     </div>
                 
@@ -128,29 +128,29 @@
                   <div class="RSD">
                         <div class="wrapper">
                                 <label for="RSD">Trimming Table(kg)</label>
-                                <input type="number" id="gen1diesel" name= "LineSettingForm Trimming Table(kg)" required
+                                <input type="number" id="gen1diesel" name=  "Trimming Table(kg)" required
                                     placeholder="Enter Trimming Table(kg)" min="0">
                         </div>
                         <div class="wrapper">
                             <label for="RSD">Silver remover(kg)</label>
-                                <input type="number" id="gen1diesel" name= "LineSettingForm Silver remover(kg)" required
+                                <input type="number" id="gen1diesel" name=  "Silver remover(kg)" required
                                     placeholder="Enter Silver remover(kg)" min="0">
                         </div>
                     </div>
                     <div class="RSD">
                         <div class="wrapper">
                             <label for="RSD">1st Inspection (kg)</label>
-                                <input type="number" id="gen1diesel" name= "LineSettingForm 1st Inspection(kg)" required
+                                <input type="number" id="gen1diesel" name= "1st Inspection(kg)" required
                                     placeholder="Enter 1st Inspection(kg)" min="0">
                         </div>
                         <div class="wrapper">
                             <label for="RSD">Final Inspection(kg)</label>
-                                <input type="number" id="gen1diesel" name= "LineSettingForm 1t Inspection (kg)" required
+                                <input type="number" id="gen1diesel" name=  "Final Inspection (kg)" required
                                     placeholder="Enter Final Inspection(kg)" min="0">
                         </div>
                     </div>
                     <label for="RSD">Total(kg)</label>
-                    <input type="number" id="gen1diesel" name= "LineSettingForm Total (kg)" required
+                    <input type="number" id="gen1diesel" name=  "Total (kg)" required
                         placeholder="Enter Total(kg)" min="0">
             </div>
             <h2>Manpower Record</h2>
@@ -160,7 +160,7 @@
                     <label for="RSD">Hopper Area
                     </label>
                     
-                        <input type="text" id="gen1Units" name="LineSettingForm Hopper Area" required
+                        <input type="text" id="gen1Units" name= "Hopper Area" required
                             placeholder="Enter Hopper Area">
                         
                 </div>
@@ -168,7 +168,7 @@
                     <label for="RSD">Trimming Convey
                     </label>
                     
-                        <input type="text" id="gen1Units" name="LineSettingForm Trimming Convey" required
+                        <input type="text" id="gen1Units" name= "Trimming Convey" required
                             placeholder="Enter Trimming Convey ">
                         
                 </div>       
@@ -176,14 +176,14 @@
                 <div class="RSD">
                     <div class="wrapper">
                         <label for="RSD">1st Inspection conveyor </label>
-                            <input type="text" id="gen1Units" name="LineSettingForm 1st Inspection conveyor" required
+                            <input type="text" id="gen1Units" name= "1st Inspection conveyor" required
                                 placeholder="Enter 1st Inspection Conveyor ">
                             
                     </div>
                    
                         <div class="wrapper">
                             <label for="RSD">2nd Inspection conveyor </label>
-                                <input type="text" id="gen1Units" name="LineSettingForm 2nd Inspection conveyor" required
+                                <input type="text" id="gen1Units" name= "2nd Inspection conveyor" required
                                     placeholder="Enter 2nd Inspection Conveyor">
                                 
                         </div>
@@ -191,14 +191,14 @@
                 <div class="RSD">
                     <div class="wrapper">
                         <label for="RSD">Packing</label>
-                            <input type="text" id="gen1Units" name="LineSettingForm Packing" required
+                            <input type="text" id="gen1Units" name= "Packing" required
                                 placeholder="Enter Packing ">
                             
                     </div>
                    
                         <div class="wrapper">
                             <label for="RSD">Cleaning</label>
-                                <input type="text" id="gen1Units" name="LineSettingForm Cleaning" required
+                                <input type="text" id="gen1Units" name= "Cleaning" required
                                     placeholder="Enter Cleaning">
                                 
                         </div>
@@ -206,14 +206,14 @@
                 <div class="RSD">
                     <div class="wrapper">
                         <label for="RSD">Hygiene</label>
-                            <input type="text" id="gen1Units" name="LineSettingForm Hygiene" required
+                            <input type="text" id="gen1Units" name= "Hygiene" required
                                 placeholder="Enter Hygiene ">
                             
                     </div>
                    
                         <div class="wrapper">
                             <label for="RSD">Labour Supervisor</label>
-                                <input type="text" id="gen1Units" name="LineSettingForm Labour Supervisor" required
+                                <input type="text" id="gen1Units" name= "Labour Supervisor" required
                                     placeholder="Enter Labour Supervisor">
                                 
                         </div>
@@ -221,14 +221,14 @@
                 <div class="RSD">
                     <div class="wrapper">
                         <label for="RSD">Loader </label>
-                            <input type="text" id="gen1Units" name="LineSettingForm Loader" required
+                            <input type="text" id="gen1Units" name= "Loader" required
                                 placeholder="Enter Loader">
                             
                     </div>
                    
                         <div class="wrapper">
                             <label for="RSD">Other </label>
-                                <input type="text" id="gen1Units" name="LineSettingForm Other" required
+                                <input type="text" id="gen1Units" name= "Other" required
                                     placeholder="Enter Other">
                                 
                         </div>
@@ -264,7 +264,7 @@
 
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzLZTpCS_c9hKLgyDPKwnQ3IfYY3dc1Nd05GaWwORr_LLP5jKzN8zLjK_cq3XH8Z5Xt/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxDZr5YkGOt7T0as4LhuIR7WCq5f940fm0G9aXQCqFth3YCEHTsOZtBG0Kbb5CiLtTawA/exec';
         const form = document.getElementById("LineSettingsandOiLStatusForm");
 
         // modal javascript
@@ -360,19 +360,7 @@
         });
     </script>
   
-    <script>
-        document.getElementById("size").addEventListener("change", function() {
-            var selectedSize = document.getElementById("size").value;
-            alert("You selected: " + selectedSize);
-        });
-    </script>
-    <script>
-        document.getElementById("yesno").addEventListener("change", function() {
-            var selectedOption = document.getElementById("yesno").value;
-            alert("You selected: " + selectedOption);
-        });
-    </script>
-
+    
 </body>
 
 </html>
