@@ -69,10 +69,18 @@
                 <!-- third three -->
                 <h2>Line Setting</h2>
                 <div class="RSD">
+
+                    <div class="wrapper">
+                        <label for="RSD">Startup Time</label>
+                        
+                            <input type="time" id="gen1Units" name="Startup Time" required
+                                placeholder="Enter Startup Time">
+                    </div>
+
                     <div class="wrapper">
                         <label for="RSD">Line Prep Start</label>
                         
-                            <input type="text" id="gen1Units" name="Line Prep Setting" required
+                            <input type="text" id="gen1Units" name="Line Prep Start" required
                                 placeholder="Enter Line Prep Start">
                     </div>
 
@@ -86,7 +94,7 @@
 
                     <div class="wrapper">
                         <label for="RSD"><strong>Cut Size</strong></label>
-                        <select  name="CutSize">
+                        <select  name="Cut Size">
                         <option value="6x6 mm">6x6 mm</option>
                         <option value="9x9 mm">9x9 mm</option>
                         <option value="12x12 mm">12x12 mm</option>
@@ -134,6 +142,56 @@
                                 placeholder="Enter Quantity" min="0">
                     </div>
                         </div>
+                        <h2>Oil Status @startup / shutdown</h2>
+
+                        <div class="RSD">
+                            <div class="wrapper">
+                        <label for="RSD">Fresh Initial</label>
+                            <input type="text" id="gen1diesel" name= "Fresh Initial" required placeholder="Fresh Initial"
+                                 min="0">
+                    </div>
+
+
+                    <div class="wrapper">
+                        <label for="RSD">Fresh Final</label>
+                            <input type="text" id="gen1diesel" name= "Fresh Final" required
+                                placeholder="Enter Fresh Final" min="0">
+                    </div>
+                        </div>
+                        <div class="RSD">
+                            <div class="wrapper">
+                        <label for="RSD">D-Tank Initial</label>
+                            <input type="text" id="gen1diesel" name= "D-Tank Initial" required
+                                placeholder="Enter D-Tank Initial" min="0">
+                    </div>
+
+
+                    <div class="wrapper">
+                        <label for="RSD">D-Tank Final</label>
+                            <input type="number" id="gen1diesel" name= "D-Tank Final" required
+                                placeholder="Enter D-Tank Final" min="0">
+                    </div>
+                        </div>
+                        <div class="RSD">
+                            <div class="wrapper">
+                        <label for="RSD">Startup Fill</label>
+                            <input type="text" id="gen1diesel" name= "Startup Fill" required
+                                placeholder="Enter Startup Fill" min="0">
+                    </div>
+
+
+                    <div class="wrapper">
+                        <label for="RSD">Used Return</label>
+                            <input type="text" id="gen1diesel" name= "Used Return" required
+                                placeholder="Used Return" min="0">
+                    </div>
+                        </div>
+                        <div class="wrapper">
+                            <label for="RSD">Used Oil FFA</label>
+                                <input type="text" id="gen1diesel" name= "Used Oil FFA" required
+                                    placeholder="Enter Used Oil FFA" min="0">
+                        </div>
+                            </div>
                         <h2>Process Waste</h2>
 
                   <div class="RSD">
