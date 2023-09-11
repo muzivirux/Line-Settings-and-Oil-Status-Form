@@ -91,57 +91,55 @@
                                 placeholder="Enter Line Prep Complete">
                     </div>
                 </div>
-
-                    <div class="wrapper">
-                        <label for="RSD"><strong>Cut Size</strong></label>
-                        <select  name="Cut Size">
+               
+                <div class="wrapper">
+                    <label for="SizeChange"><strong>Size change during shift</strong></label>
+                    <select id="SizeChange" name="Cut Size Change During Shift">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                <div class="wrapper">
+                    <label for="CutSize"><strong>Cut Size</strong></label>
+                    <select id="CutSize" name="Cut Size">
                         <option value="6x6 mm">6x6 mm</option>
                         <option value="9x9 mm">9x9 mm</option>
                         <option value="12x12 mm">12x12 mm</option>
-                        </select>
-                    </div>
-                
-
-                        
-                        
-
-                           <div class="wrapper">
-                        <label for="RSD"><strong>Size change during shift</strong></label>
-                        <select id="yesno" name="Cut Size Change During Shift">
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
-                        </select>
-                    </div>
-                
-                <h3>If Cutter Blades Replaced</h3>
+                    </select>
+                </div>
+            
+                <label><strong>Cutter Blades Replaced</strong></label>
                 <div class="RSD">
-                            <div class="wrapper">
-                        <label for="RSD">Time</label>
-                            <input type="time" id="gen1diesel" name= "Time If Cutter Blades Replaced" required
-                                 min="0">
-                    </div>
-
-
+                    <select id="BladesReplaced" name="Cutter Blades Replaced">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            
+                <div class="RSD" id="BladesDetails">
                     <div class="wrapper">
-                        <label for="RSD">Blade Code</label>
-                            <input type="text" id="gen1diesel" name= "Blade Code If Cutter Blades Replaced" required
-                                placeholder="Enter Blade Code" min="0">
+                        <label for="Time">Time</label>
+                        <input type="time" id="Time" name="Time If Cutter Blades Replaced" required min="0">
                     </div>
-                        </div>
-                        <div class="RSD">
-                            <div class="wrapper">
-                        <label for="RSD">Blade Type</label>
-                            <input type="text" id="gen1diesel" name= "Blade Type If Cutter Blades Replaced" required
-                                placeholder="Enter Blade Type" min="0">
-                    </div>
-
-
+            
                     <div class="wrapper">
-                        <label for="RSD">Quantity</label>
-                            <input type="number" id="gen1diesel" name= "Quantity If Cutter Blades Replaced" required
-                                placeholder="Enter Quantity" min="0">
+                        <label for="BladeCode">Blade Code</label>
+                        <input type="text" id="BladeCode" name="Blade Code If Cutter Blades Replaced" required placeholder="Enter Blade Code" min="0">
                     </div>
-                        </div>
+                </div>
+            
+                <div class="RSD" id="BladeTypeQuantity">
+                    <div class="wrapper">
+                        <label for="BladeType">Blade Type</label>
+                        <input type="text" id="BladeType" name="Blade Type If Cutter Blades Replaced" required placeholder="Enter Blade Type" min="0">
+                    </div>
+            
+                    <div class="wrapper">
+                        <label for="Quantity">Quantity</label>
+                        <input type="number" id="Quantity" name="Quantity If Cutter Blades Replaced" required placeholder="Enter Quantity" min="0">
+                    </div>
+                </div>
+            
                         <h2>Oil Status @startup / shutdown</h2>
 
                         <div class="RSD">
@@ -428,7 +426,57 @@
             }
         });
     </script>
-  
+   <script>
+    const cutSizeSelect = document.getElementById("CutSize");
+    const sizeChangeSelect = document.getElementById("SizeChange");
+    const bladesReplacedSelect = document.getElementById("BladesReplaced");
+    const bladesDetailsDiv = document.getElementById("BladesDetails");
+    const bladeTypeQuantityDiv = document.getElementById("BladeTypeQuantity");
+    const timeInput = document.getElementById("Time");
+    const bladeCodeInput = document.getElementById("BladeCode");
+    const bladeTypeInput = document.getElementById("BladeType");
+    const quantityInput = document.getElementById("Quantity");
+
+    cutSizeSelect.addEventListener("change", () => {
+        if (cutSizeSelect.value !== "6x6 mm") {
+            // Show next elements
+            // You can implement this logic as needed
+        } else {
+            // Hide next elements and remove the "required" attribute
+            // You can implement this logic as needed
+        }
+    });
+
+    sizeChangeSelect.addEventListener("change", () => {
+        if (sizeChangeSelect.value === "Yes") {
+            // Change both sizes during shift
+            // You can implement this logic as needed
+        }
+    });
+
+    bladesReplacedSelect.addEventListener("change", () => {
+        if (bladesReplacedSelect.value === "Yes") {
+            // Show the details for cutter blades replaced
+            bladesDetailsDiv.style.display = "block";
+            bladeTypeQuantityDiv.style.display = "block";
+            
+            // Set the "required" attribute for the input elements
+            timeInput.required = true;
+            bladeCodeInput.required = true;
+            bladeTypeInput.required = true;
+            quantityInput.required = true;
+        } else {
+            // Hide the details if blades were not replaced and remove the "required" attribute
+            bladesDetailsDiv.style.display = "none";
+            bladeTypeQuantityDiv.style.display = "none";
+            
+            timeInput.required = false;
+            bladeCodeInput.required = false;
+            bladeTypeInput.required = false;
+            quantityInput.required = false;
+        }
+    });
+</script>
     
 </body>
 
