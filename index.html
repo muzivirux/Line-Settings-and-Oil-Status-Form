@@ -428,24 +428,43 @@
             }
         });
     </script>
-    <script>
+     <script>
         const cutSizeSelect = document.getElementById("CutSize");
         const sizeChangeSelect = document.getElementById("SizeChange");
         const bladesReplacedSelect = document.getElementById("BladesReplaced");
         const bladesDetailsDiv = document.getElementById("BladesDetails");
         const bladeTypeQuantityDiv = document.getElementById("BladeTypeQuantity");
+        const timeInput = document.getElementById("Time");
+        const bladeCodeInput = document.getElementById("BladeCode");
+        const bladeTypeInput = document.getElementById("BladeType");
+        const quantityInput = document.getElementById("Quantity");
+
+        // Function to toggle the 'required' attribute based on visibility
+        function toggleRequired(element, isVisible) {
+            if (isVisible) {
+                element.setAttribute("required", "required");
+            } else {
+                element.removeAttribute("required");
+            }
+        }
 
         cutSizeSelect.addEventListener("change", () => {
             if (cutSizeSelect.value !== "6x6 mm") {
                 // Show next elements
-                // You can implement this logic as needed
                 bladesDetailsDiv.style.display = "block";
                 bladeTypeQuantityDiv.style.display = "block";
+                toggleRequired(timeInput, true);
+                toggleRequired(bladeCodeInput, true);
+                toggleRequired(bladeTypeInput, true);
+                toggleRequired(quantityInput, true);
             } else {
                 // Hide next elements
-                // You can implement this logic as needed
                 bladesDetailsDiv.style.display = "none";
                 bladeTypeQuantityDiv.style.display = "none";
+                toggleRequired(timeInput, false);
+                toggleRequired(bladeCodeInput, false);
+                toggleRequired(bladeTypeInput, false);
+                toggleRequired(quantityInput, false);
             }
         });
 
@@ -461,10 +480,18 @@
                 // Show the details for cutter blades replaced
                 bladesDetailsDiv.style.display = "block";
                 bladeTypeQuantityDiv.style.display = "block";
+                toggleRequired(timeInput, true);
+                toggleRequired(bladeCodeInput, true);
+                toggleRequired(bladeTypeInput, true);
+                toggleRequired(quantityInput, true);
             } else {
                 // Hide the details if blades were not replaced
                 bladesDetailsDiv.style.display = "none";
                 bladeTypeQuantityDiv.style.display = "none";
+                toggleRequired(timeInput, false);
+                toggleRequired(bladeCodeInput, false);
+                toggleRequired(bladeTypeInput, false);
+                toggleRequired(quantityInput, false);
             }
         });
     </script>
