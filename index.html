@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Line Settings and Oil Status  Form</title>
+    <title>Line Settings and Oil Status Form</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" href="./images/favico.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,293 +21,258 @@
     <div id="line"></div>
     <form id="LineSettingsandOiLStatusForm">
         <!-- Wapda -->
-             
-          
-
-            <!-- second three -->
-            <div class="RSD">
-                <div class="wrapper">
-                    <label for="RSD">Shift</label>
-                        <input type="time" required min="0" id="wapdaoffpeakend"
-                            name="Shift" required
-                            placeholder="HH:MM">
-                    </div>
-
-                <div class="wrapper">
-                    <label for="RSD">Date</label>
-                    <input type="date" required min="0" id="wapdatotal"
-                        name="date" required placeholder="Enter Date">
-                </div>
-                <div class="wrapper">
-                    <label for="RSD">Document No</label>
-                    <input type="text" required min="0" id="wapdatotal"
-                        name="Document No" required placeholder="Enter Document No">
-                </div>
-            </div>
-            
-
-                <div class="RSD">
-                    <div class="wrapper">
-                        <label for="RSD">Revision No</label>
-                            <input type="text"  id="wapdaoffpeakend"
-                                name="Revision No" required
-                                placeholder='Enter Revision No'>
-                        </div>
-                <div class="wrapper">
-                <label for="RSD">Line Supervisor</label>
-                    <input type="text"  id="wapdaoffpeakend"
-                        name="Line Supervisor" required
-                        placeholder='Enter name'>
-                </div>
-                <div class="wrapper">
-                    <label for="RSD">Junior Manager</label>
-                    <input type="text"  id="wapdatotalend"
-                        name="Junior Manager" required placeholder="Enter name">
-                </div>
-            </div>
-
-                <!-- third three -->
-                <h2>Line Setting</h2>
-                <div class="RSD">
-
-                    <div class="wrapper">
-                        <label for="RSD">Startup Time</label>
-                        
-                            <input type="time" id="gen1Units" name="Startup Time" required
-                                placeholder="Enter Startup Time">
-                    </div>
-
-                    <div class="wrapper">
-                        <label for="RSD">Line Prep Start</label>
-                        
-                            <input type="text" id="gen1Units" name="Line Prep Start" required
-                                placeholder="Enter Line Prep Start">
-                    </div>
 
 
-                    <div class="wrapper">
-                        <label for="RSD">Line Prep Complete</label>
-                            <input type="text" id="gen1diesel" name="Line Prep Complete" required
-                                placeholder="Enter Line Prep Complete">
-                    </div>
-                </div>
-               
-                <div class="wrapper">
-                    <label for="SizeChange"><strong>Size change during shift</strong></label>
-                    <select id="SizeChange" name="Cut Size Change During Shift">
-                       
-                        <option value="No">No</option>
-                        <option value="Yes">Yes</option>
-                       
+
+        <!-- second three -->
+        <div class="RSD">
+            <div class="wrapper">
+                <label for="RSD">Shift</label>
+                <div class="input1" style="display: flex; gap: .1rem;">
+                    <input type="time" required min="0" id="wapdaoffpeakend" name="Shift" required placeholder="HH:MM"
+                        style="width: 60%;">
+                    <select id="Shift" name="Shift" style="width: 40%;">
+                        <option value="Morning">Morning</option>
+                        <option value="Evening">Evening</option>
+                        <option value="Night">Night</option>
+
                     </select>
                 </div>
-                <div class="wrapper">
-                    <label for="CutSize"><strong>Cut Size</strong></label>
-                    <select id="CutSize" name="Cut Size">
-                        <option value="6x6 mm">6x6 mm</option>
-                        <option value="9x9 mm">9x9 mm</option>
-                        <option value="12x12 mm">12x12 mm</option>
-                    </select>
-                </div>
-            
-                
-            
-                <label><strong>Cutter Blades Replaced</strong></label>
-                <div class="RSD">
-                    <select id="BladesReplaced" name="Cutter Blades Replaced">
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                    </select>
-                </div>
-            
-                <div class="RSD" id="BladesDetails" >
-                    <div class="wrapper">
-                        <label for="Time">Time</label>
-                        <input type="time" id="Time" name="Time If Cutter Blades Replaced">
-                    </div>
-            
-                    <div class="wrapper">
-                        <label for="BladeCode">Blade Code</label>
-                        <input type="text" id="BladeCode" name="Blade Code If Cutter Blades Replaced">
-                    </div>
-                </div>
-            
-                <div class="RSD" id="BladeTypeQuantity" >
-                    <div class="wrapper">
-                        <label for="BladeType">Blade Type</label>
-                        <input type="text" id="BladeType" name="Blade Type If Cutter Blades Replaced">
-                    </div>
-            
-                    <div class="wrapper">
-                        <label for="Quantity">Quantity</label>
-                        <input type="number" id="Quantity" name="Quantity If Cutter Blades Replaced">
-                    </div>
-                </div>
-                        <h2>Oil Status @startup / shutdown</h2>
 
-                        <div class="RSD">
-                            <div class="wrapper">
-                        <label for="RSD">Fresh Initial</label>
-                            <input type="text" id="gen1diesel" name= "Fresh Initial" required placeholder="Fresh Initial"
-                                 min="0">
-                    </div>
-
-
-                    <div class="wrapper">
-                        <label for="RSD">Fresh Final</label>
-                            <input type="text" id="gen1diesel" name= "Fresh Final" required
-                                placeholder="Enter Fresh Final" min="0">
-                    </div>
-                        </div>
-                        <div class="RSD">
-                            <div class="wrapper">
-                        <label for="RSD">D-Tank Initial</label>
-                            <input type="text" id="gen1diesel" name= "D-Tank Initial" required
-                                placeholder="Enter D-Tank Initial" min="0">
-                    </div>
-
-
-                    <div class="wrapper">
-                        <label for="RSD">D-Tank Final</label>
-                            <input type="text" id="gen1diesel" name= "D-Tank Final" required
-                                placeholder="Enter D-Tank Final" min="0">
-                    </div>
-                        </div>
-                        <div class="RSD">
-                            <div class="wrapper">
-                        <label for="RSD">Startup Fill</label>
-                            <input type="text" id="gen1diesel" name= "Startup Fill" required
-                                placeholder="Enter Startup Fill" min="0">
-                    </div>
-
-
-                    <div class="wrapper">
-                        <label for="RSD">Used Return</label>
-                            <input type="text" id="gen1diesel" name= "Used Return" required
-                                placeholder="Used Return" min="0">
-                    </div>
-                        </div>
-                        <div class="wrapper">
-                            <label for="RSD">Used Oil FFA</label>
-                                <input type="text" id="gen1diesel" name= "Used Oil FFA" required
-                                    placeholder="Enter Used Oil FFA" min="0">
-                        </div>
-                            </div>
-                        <h2>Process Waste</h2>
-
-                  <div class="RSD">
-                        <div class="wrapper">
-                                <label for="RSD">Trimming Table(kg)</label>
-                                <input type="number" id="gen1diesel" name=  "Trimming Table(kg)" required
-                                    placeholder="Enter Trimming Table(kg)" min="0" step=".1">
-                        </div>
-                        <div class="wrapper">
-                            <label for="RSD">Sliver remover(kg)</label>
-                                <input type="number" id="gen1diesel" name=  "Sliver remover(kg)" required
-                                    placeholder="Enter Sliver remover(kg)" min="0" step=".1">
-                        </div>
-                    </div>
-                    <div class="RSD">
-                        <div class="wrapper">
-                            <label for="RSD">1st Inspection (kg)</label>
-                                <input type="number" id="gen1diesel" name= "1st Inspection(kg)" required
-                                    placeholder="Enter 1st Inspection(kg)" min="0" step=".1">
-                        </div>
-                        <div class="wrapper">
-                            <label for="RSD">Final Inspection(kg)</label>
-                                <input type="number" id="gen1diesel" name=  "Final Inspection (kg)" required
-                                    placeholder="Enter Final Inspection(kg)" min="0" step=".1">
-                        </div>
-                    </div>
-                    <label for="RSD">Total(kg)</label>
-                    <input type="number" id="gen1diesel" name=  "Total (kg)" required
-                        placeholder="Enter Total(kg)" min="0" step=".1">
             </div>
-            <h2>Manpower Record</h2>
 
-            <div class="RSD">
-                <div class="wrapper">
-                    <label for="RSD">Hopper Area
-                    </label>
-                    
-                        <input type="text" id="gen1Units" name= "Hopper Area" required
-                            placeholder="Enter Hopper Area">
-                        
-                </div>
-                <div class="wrapper">
-                    <label for="RSD">Trimming Conveyor
-                    </label>
-                    
-                        <input type="text" id="gen1Units" name= "Trimming Conveyor" required
-                            placeholder="Enter Trimming Convey ">
-                        
-                </div>       
+            <div class="wrapper">
+                <label for="RSD">Date</label>
+                <input type="date" required min="0" id="wapdatotal" name="date" required placeholder="Enter Date">
             </div>
-                <div class="RSD">
-                    <div class="wrapper">
-                        <label for="RSD">1st Inspection conveyor </label>
-                            <input type="text" id="gen1Units" name= "1st Inspection conveyor" required
-                                placeholder="Enter 1st Inspection Conveyor ">
-                            
-                    </div>
-                   
-                        <div class="wrapper">
-                            <label for="RSD">2nd Inspection conveyor </label>
-                                <input type="text" id="gen1Units" name= "2nd Inspection conveyor" required
-                                    placeholder="Enter 2nd Inspection Conveyor">
-                                
-                        </div>
-                </div>
-                <div class="RSD">
-                    <div class="wrapper">
-                        <label for="RSD">Packing</label>
-                            <input type="text" id="gen1Units" name= "Packing" required
-                                placeholder="Enter Packing ">
-                            
-                    </div>
-                   
-                        <div class="wrapper">
-                            <label for="RSD">Cleaning</label>
-                                <input type="text" id="gen1Units" name= "Cleaning" required
-                                    placeholder="Enter Cleaning">
-                                
-                        </div>
-                </div>
-                <div class="RSD">
-                    <div class="wrapper">
-                        <label for="RSD">Hygiene</label>
-                            <input type="text" id="gen1Units" name= "Hygiene" required
-                                placeholder="Enter Hygiene ">
-                            
-                    </div>
-                   
-                        <div class="wrapper">
-                            <label for="RSD">Labour Supervisor</label>
-                                <input type="text" id="gen1Units" name= "Labour Supervisor" required
-                                    placeholder="Enter Labour Supervisor">
-                                
-                        </div>
-                </div>
-                <div class="RSD">
-                    <div class="wrapper">
-                        <label for="RSD">Loader </label>
-                            <input type="text" id="gen1Units" name= "Loader" required
-                                placeholder="Enter Loader">
-                            
-                    </div>
-                   
-                        <div class="wrapper">
-                            <label for="RSD">Other </label>
-                                <input type="text" id="gen1Units" name= "Other" required
-                                    placeholder="Enter Other">
-                                
-                        </div>
-                </div>
+        </div>
 
-                        
+        <div class="RSD">
+            <div class="wrapper">
+                <label for="RSD">Document No</label>
+                <input type="text" required min="0" id="wapdatotal" name="Document No" required
+                    placeholder="Enter Document No">
+            </div>
 
-                       
-                                <input type="submit" value="Submit">
+            <div class="wrapper">
+                <label for="RSD">Line Supervisor's name</label>
+                <input type="text" id="wapdaoffpeakend" name="Line Supervisor" required placeholder='Enter name'>
+            </div>
+            <div class="wrapper">
+                <label for="RSD">Junior Manager</label>
+                <input type="text" id="wapdatotalend" name="Junior Manager" required placeholder="Enter name">
+            </div>
+        </div>
+
+        <!-- third three -->
+        <h2>Line Setting</h2>
+        <div class="RSD">
+            <div class="wrapper">
+                <label for="RSD">Line Prep Start</label>
+
+                <input type="text" id="gen1Units" name="Line Prep Start" required placeholder="Enter Line Prep Start">
+            </div>
+
+
+            <div class="wrapper">
+                <label for="RSD">Line Prep Complete</label>
+                <input type="text" id="gen1diesel" name="Line Prep Complete" required
+                    placeholder="Enter Line Prep Complete">
+            </div>
+            <div class="wrapper">
+                <label for="RSD">Startup Time</label>
+
+                <input type="time" id="gen1Units" name="Startup Time" required placeholder="Enter Startup Time">
+            </div>
+
+        </div>
+
+        <div class="wrapper">
+            <label for="SizeChange"><strong>Size change during shift</strong></label>
+            <select id="SizeChange" name="Cut Size Change During Shift">
+
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+
+            </select>
+        </div>
+        <div class="wrapper">
+            <label for="CutSize"><strong>Cut Size</strong></label>
+            <select id="CutSize" name="Cut Size">
+                <option value="6x6 mm">6x6 mm</option>
+                <option value="9x9 mm">9x9 mm</option>
+                <option value="12x12 mm">12x12 mm</option>
+            </select>
+        </div>
+
+
+
+        <label><strong>Cutter Blades Replaced</strong></label>
+        <div class="RSD">
+            <select id="BladesReplaced" name="Cutter Blades Replaced">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <div class="RSD" id="BladesDetails">
+            <div class="wrapper">
+                <label for="Time">Time</label>
+                <input type="time" id="Time" name="Time If Cutter Blades Replaced">
+            </div>
+
+            <div class="wrapper">
+                <label for="BladeCode">Blade Code</label>
+                <input type="text" id="BladeCode" name="Blade Code If Cutter Blades Replaced" placeholder="Enter Blade Code">
+            </div>
+        </div>
+
+        <div class="RSD" id="BladeTypeQuantity">
+
+
+            <div class="wrapper">
+                <label for="Quantity">Quantity</label>
+                <input type="number" id="Quantity" name="Quantity If Cutter Blades Replaced"
+                placeholder="Enter Quantity">
+            </div>
+        </div>
+
+        
+
+        <h2>Process Waste</h2>
+
+        
+
+        <div class="RSD">
+            <div class="wrapper">
+                <label for="RSD">Trimming Table(kg)</label>
+                <input type="number" id="gen1diesel" name="Trimming Table(kg)"
+                id="trimmingTable"  required
+                    placeholder="Enter Trimming Table(kg)" min="0" step=".1">
+            </div>
+            <div class="wrapper">
+                <label for="RSD">Final Inspection(kg)</label>
+                <input type="number" id="gen1diesel" name="Final Inspection (kg)" id="finalInspection" required 
+                    placeholder="Enter Final Inspection(kg)" min="0" step=".1">
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <label for="RSD">1st Inspection (kg) / Sliver remover(kg)</label>
+            <input type="number" id="gen1diesel" name="1st Inspection(kg) / Sliver remover(kg)" id="firstInspection" required
+                placeholder="Enter 1st Inspection(kg)/Sliver remover(kg)" min="0" step=".1">
+        </div>
+
+        <label for="RSD">Total(kg)</label>
+        <input type="number" id="gen1diesel" name="Total (kg)" required placeholder="Enter Total(kg)" min="0" step=".1" id="total">
+        </div>
+
+        <h2>Hopper Waste</h2>
+        <div class="RSD">
+
+            <div class="wrapper">
+                <label for="RSD">Soil(kg)
+                </label>
+
+                <input type="number" id="gen1Units" name="Soil" required placeholder="Enter Soil(kg)" step=".1">
+
+            </div>
+            <div class="wrapper">
+                <label for="RSD">Rotten Potato(kg)
+                </label>
+
+                <input type="text" id="gen1Units" name="Rotten Potato(kg)" required
+                    placeholder="Enter Rotten Potato(kg)" step=".1">
+
+            </div>
+
+
+            <div class="wrapper">
+                <label for="RSD">Undersized Potato</label>
+                <input type="text" id="gen1Units" name="Undersized Potato" required
+                    placeholder="Enter Undersized Potato" step=".1">
+
+            </div>
+        </div>
+
+        <h2>Manpower Record</h2>
+
+        <div class="RSD">
+            <div class="wrapper">
+                <label for="RSD">Hopper Area
+                </label>
+
+                <input type="number" id="gen1Units" name="Hopper Area" required placeholder="Enter Hopper Area" min="0">
+
+            </div>
+            <div class="wrapper">
+                <label for="RSD">Trimming Conveyor
+                </label>
+
+                <input type="number" id="gen1Units" name="Trimming Conveyor" required
+                    placeholder="Enter Trimming Convey " min="0">
+
+            </div>
+        </div>
+        <div class="RSD">
+            <div class="wrapper">
+                <label for="RSD">1st Inspection conveyor </label>
+                <input type="number" id="gen1Units" name="1st Inspection conveyor" required
+                    placeholder="Enter 1st Inspection Conveyor " min="0">
+
+            </div>
+
+            <div class="wrapper">
+                <label for="RSD">2nd Inspection conveyor </label>
+                <input type="number" id="gen1Units" name="2nd Inspection conveyor" required
+                    placeholder="Enter 2nd Inspection Conveyor" min="0">
+
+            </div>
+        </div>
+        <div class="RSD">
+            <div class="wrapper">
+                <label for="RSD">Packing</label>
+                <input type="number" id="gen1Units" name="Packing" required placeholder="Enter Packing " min="0">
+
+            </div>
+
+            <div class="wrapper">
+                <label for="RSD">Cleaning</label>
+                <input type="number" id="gen1Units" name="Cleaning" required placeholder="Enter Cleaning" min="0">
+
+            </div>
+        </div>
+        <div class="RSD">
+            <div class="wrapper">
+                <label for="RSD">Hygiene</label>
+                <input type="number" id="gen1Units" name="Hygiene" required placeholder="Enter Hygiene " min="0"> 
+
+            </div>
+
+            <div class="wrapper">
+                <label for="RSD">Labour Supervisor</label>
+                <input type="number" id="gen1Units" name="Labour Supervisor" required
+                    placeholder="Enter Labour Supervisor" min="0">
+
+            </div>
+        </div>
+        <div class="RSD">
+            <div class="wrapper">
+                <label for="RSD">Loader </label>
+                <input type="number" id="gen1Units" name="Loader" required placeholder="Enter Loader" min="0">
+
+            </div>
+
+            <div class="wrapper">
+                <label for="RSD">Other </label>
+                <input type="number" id="gen1Units" name="Other" required placeholder="Enter Other" min="0">
+
+            </div>
+        </div>
+
+
+
+        <input type="submit" value="Submit">
     </form>
 
     <!-- spinner html -->
@@ -429,7 +394,7 @@
             }
         });
     </script>
-     <script>
+    <script>
         const cutSizeSelect = document.getElementById("CutSize");
         const sizeChangeSelect = document.getElementById("SizeChange");
         const bladesReplacedSelect = document.getElementById("BladesReplaced");
@@ -496,6 +461,32 @@
             }
         });
     </script>
-</body>
+    <script>
+        // Get references to the input fields
+        const trimmingTableInput = document.getElementById("trimmingTable");
+        const finalInspectionInput = document.getElementById("finalInspection");
+        const firstInspectionInput = document.getElementById("firstInspection");
+        const totalInput = document.getElementById("total");
+    
+        // Add an event listener to each input field
+        trimmingTableInput.addEventListener("input", calculateTotal);
+        finalInspectionInput.addEventListener("input", calculateTotal);
+        firstInspectionInput.addEventListener("input", calculateTotal);
+    
+        // Function to calculate the total
+        function calculateTotal() {
+            // Get the values from the input fields
+            const trimmingTableValue = parseFloat(trimmingTableInput.value) || 0;
+            const finalInspectionValue = parseFloat(finalInspectionInput.value) || 0;
+            const firstInspectionValue = parseFloat(firstInspectionInput.value) || 0;
+    
+            // Calculate the total
+            const total = trimmingTableValue + finalInspectionValue + firstInspectionValue;
+    
+            // Set the total value in the total input field
+            totalInput.value = total.toFixed(1);
+        }
+    </script>
+    
 
 </html>
