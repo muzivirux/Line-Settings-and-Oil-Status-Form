@@ -115,6 +115,25 @@
             </select>
         </div>
 
+        <label><strong>Number of blades</strong></label>
+        <div class="RSD">
+            <select id="NumberOfBlades" name="Number of blades">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+        </div>
+
         <div class="RSD" id="BladesDetails">
             <div class="wrapper">
                 <label for="Time">Time</label>
@@ -123,7 +142,8 @@
 
             <div class="wrapper">
                 <label for="BladeCode">Blade Code</label>
-                <input type="text" id="BladeCode" name="Blade Code If Cutter Blades Replaced" placeholder="Enter Blade Code">
+                <input type="text" id="BladeCode" name="Blade Code If Cutter Blades Replaced"
+                    placeholder="Enter Blade Code">
             </div>
         </div>
 
@@ -133,38 +153,38 @@
             <div class="wrapper">
                 <label for="Quantity">Quantity</label>
                 <input type="number" id="Quantity" name="Quantity If Cutter Blades Replaced"
-                placeholder="Enter Quantity">
+                    placeholder="Enter Quantity">
             </div>
         </div>
 
-        
+
 
         <h2>Process Waste</h2>
 
-        
+
 
         <div class="RSD">
             <div class="wrapper">
                 <label for="RSD">Trimming Table(kg)</label>
-                <input type="number" id="gen1diesel" name="Trimming Table(kg)"
-                id="trimmingTable"  required
+                <input type="number" id="gen1diesel" name="Trimming Table(kg)" id="trimmingTable" required
                     placeholder="Enter Trimming Table(kg)" min="0" step=".1">
             </div>
             <div class="wrapper">
                 <label for="RSD">Final Inspection(kg)</label>
-                <input type="number" id="gen1diesel" name="Final Inspection (kg)" id="finalInspection" required 
+                <input type="number" id="gen1diesel" name="Final Inspection (kg)" id="finalInspection" required
                     placeholder="Enter Final Inspection(kg)" min="0" step=".1">
             </div>
         </div>
 
         <div class="wrapper">
             <label for="RSD">1st Inspection (kg) / Sliver remover(kg)</label>
-            <input type="number" id="gen1diesel" name="1st Inspection(kg) / Sliver remover(kg)" id="firstInspection" required
-                placeholder="Enter 1st Inspection(kg)/Sliver remover(kg)" min="0" step=".1">
+            <input type="number" id="gen1diesel" name="1st Inspection(kg) / Sliver remover(kg)" id="firstInspection"
+                required placeholder="Enter 1st Inspection(kg)/Sliver remover(kg)" min="0" step=".1">
         </div>
 
         <label for="RSD">Total(kg)</label>
-        <input type="number" id="gen1diesel" name="Total (kg)" required placeholder="Enter Total(kg)" min="0" step=".1" id="total">
+        <input type="number" id="gen1diesel" name="Total (kg)" required placeholder="Enter Total(kg)" min="0" step=".1"
+            id="total">
         </div>
 
         <h2>Hopper Waste</h2>
@@ -245,7 +265,7 @@
         <div class="RSD">
             <div class="wrapper">
                 <label for="RSD">Hygiene</label>
-                <input type="number" id="gen1Units" name="Hygiene" required placeholder="Enter Hygiene " min="0"> 
+                <input type="number" id="gen1Units" name="Hygiene" required placeholder="Enter Hygiene " min="0">
 
             </div>
 
@@ -467,26 +487,26 @@
         const finalInspectionInput = document.getElementById("finalInspection");
         const firstInspectionInput = document.getElementById("firstInspection");
         const totalInput = document.getElementById("total");
-    
+
         // Add an event listener to each input field
         trimmingTableInput.addEventListener("input", calculateTotal);
         finalInspectionInput.addEventListener("input", calculateTotal);
         firstInspectionInput.addEventListener("input", calculateTotal);
-    
+
         // Function to calculate the total
         function calculateTotal() {
             // Get the values from the input fields
             const trimmingTableValue = parseFloat(trimmingTableInput.value) || 0;
             const finalInspectionValue = parseFloat(finalInspectionInput.value) || 0;
             const firstInspectionValue = parseFloat(firstInspectionInput.value) || 0;
-    
+
             // Calculate the total
             const total = trimmingTableValue + finalInspectionValue + firstInspectionValue;
-    
+
             // Set the total value in the total input field
             totalInput.value = total.toFixed(1);
         }
     </script>
-    
+
 
 </html>
