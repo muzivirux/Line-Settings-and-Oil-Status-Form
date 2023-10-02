@@ -163,29 +163,28 @@
         <h2>Process Waste</h2>
 
 
-
+        <div>
         <div class="RSD">
             <div class="wrapper">
-                <label for="RSD">Trimming Table(kg)</label>
-                <input type="number" id="gen1diesel" name="Trimming Table(kg)" id="trimmingTable" required
-                    placeholder="Enter Trimming Table(kg)" min="0" step=".1">
+                <label for="trimmingTable">Trimming Table (kg)</label>
+                <input type="number" id="trimmingTable" name="Trimming Table (kg)" required
+                    placeholder="Enter Trimming Table (kg)" min="0" step=".1">
             </div>
             <div class="wrapper">
-                <label for="RSD">Final Inspection(kg)</label>
-                <input type="number" id="gen1diesel" name="Final Inspection (kg)" id="finalInspection" required
-                    placeholder="Enter Final Inspection(kg)" min="0" step=".1">
+                <label for="finalInspection">Final Inspection (kg)</label>
+                <input type="number" id="finalInspection" name="Final Inspection (kg)" required
+                    placeholder="Enter Final Inspection (kg)" min="0" step=".1">
             </div>
         </div>
-
-        <div class="wrapper">
-            <label for="RSD">1st Inspection (kg) / Sliver remover(kg)</label>
-            <input type="number" id="gen1diesel" name="1st Inspection(kg) / Sliver remover(kg)" id="firstInspection"
-                required placeholder="Enter 1st Inspection(kg)/Sliver remover(kg)" min="0" step=".1">
+            <div class="wrapper">
+                <label for="firstInspection">1st Inspection (kg) / Sliver remover (kg)</label>
+                <input type="number" id="firstInspection" name="1st Inspection (kg) / Sliver remover (kg)" required
+                    placeholder="Enter 1st Inspection (kg)/Sliver remover (kg)" min="0" step=".1">
+            </div>
         </div>
-
-        <label for="RSD">Total(kg)</label>
-        <input type="number" id="gen1diesel" name="Total (kg)" required placeholder="Enter Total(kg)" min="0" step=".1"
-            id="total">
+        <div class="wrapper">
+            <label for="total">Total (kg)</label>
+            <input type="number" id="total" name="Total (kg)" required placeholder="Enter Total (kg)" min="0" step=".1">
         </div>
 
         <h2>Hopper Waste</h2>
@@ -481,32 +480,33 @@
             }
         });
     </script>
-    <script>
-        // Get references to the input fields
-        const trimmingTableInput = document.getElementById("trimmingTable");
-        const finalInspectionInput = document.getElementById("finalInspection");
-        const firstInspectionInput = document.getElementById("firstInspection");
-        const totalInput = document.getElementById("total");
+   <script>
+    // Get references to the input fields
+    const trimmingTableInput = document.getElementById("trimmingTable");
+    const finalInspectionInput = document.getElementById("finalInspection");
+    const firstInspectionInput = document.getElementById("firstInspection");
+    const totalInput = document.getElementById("total");
 
-        // Add an event listener to each input field
-        trimmingTableInput.addEventListener("input", calculateTotal);
-        finalInspectionInput.addEventListener("input", calculateTotal);
-        firstInspectionInput.addEventListener("input", calculateTotal);
+    // Function to update the total field
+    function updateTotal() {
+        const trimmingTableValue = parseFloat(trimmingTableInput.value) || 0;
+        const finalInspectionValue = parseFloat(finalInspectionInput.value) || 0;
+        const firstInspectionValue = parseFloat(firstInspectionInput.value) || 0;
 
-        // Function to calculate the total
-        function calculateTotal() {
-            // Get the values from the input fields
-            const trimmingTableValue = parseFloat(trimmingTableInput.value) || 0;
-            const finalInspectionValue = parseFloat(finalInspectionInput.value) || 0;
-            const firstInspectionValue = parseFloat(firstInspectionInput.value) || 0;
+        // Calculate the total
+        const totalValue = trimmingTableValue + finalInspectionValue + firstInspectionValue;
 
-            // Calculate the total
-            const total = trimmingTableValue + finalInspectionValue + firstInspectionValue;
+        // Update the total input field
+        totalInput.value = totalValue.toFixed(1); // Round to one decimal place
+    }
 
-            // Set the total value in the total input field
-            totalInput.value = total.toFixed(1);
-        }
-    </script>
+    // Add event listeners to the input fields to update the total
+    trimmingTableInput.addEventListener("input", updateTotal);
+    finalInspectionInput.addEventListener("input", updateTotal);
+    firstInspectionInput.addEventListener("input", updateTotal);
 
+    // Initial update
+    updateTotal();
+</script>
 
 </html>
