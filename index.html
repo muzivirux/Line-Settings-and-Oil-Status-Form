@@ -31,7 +31,8 @@
                 <div class="input1" style="display: flex; gap: .1rem;">
                     <input type="time" required min="0" id="wapdaoffpeakend" name="Shift" required placeholder="HH:MM"
                         style="width: 60%;">
-                    <select id="Shift" name="Shift" style="width: 40%;">
+                    <label for="RSD"></label>
+                    <select id="Shift" name="Shift(MEN)" style="width: 40%;">
                         <option value="Morning">Morning</option>
                         <option value="Evening">Evening</option>
                         <option value="Night">Night</option>
@@ -104,17 +105,6 @@
                 <option value="12x12 mm">12x12 mm</option>
             </select>
         </div>
-
-
-
-        <label><strong>Cutter Blades Replaced</strong></label>
-        <div class="RSD">
-            <select id="BladesReplaced" name="Cutter Blades Replaced">
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select>
-        </div>
-
         <label><strong>Number of blades</strong></label>
         <div class="RSD">
             <select id="NumberOfBlades" name="Number of blades">
@@ -133,6 +123,17 @@
                 <option value="12">12</option>
             </select>
         </div>
+
+
+        <label><strong>Cutter Blades Replaced</strong></label>
+        <div class="RSD">
+            <select id="BladesReplaced" name="Cutter Blades Replaced">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+
 
         <div class="RSD" id="BladesDetails">
             <div class="wrapper">
@@ -193,15 +194,14 @@
             <div class="wrapper">
                 <label for="RSD">Soil(kg)
                 </label>
-
-                <input type="number" id="gen1Units" name="Soil" required placeholder="Enter Soil(kg)" step=".1">
+                <input type="number" id="gen1Units" name = "Soil" required placeholder="Enter Soil(kg)" step=".1">
 
             </div>
             <div class="wrapper">
                 <label for="RSD">Rotten Potato(kg)
                 </label>
 
-                <input type="text" id="gen1Units" name="Rotten Potato(kg)" required
+                <input type="number" id="gen1Units" name="Rotten Potato(kg)" required
                     placeholder="Enter Rotten Potato(kg)" step=".1">
 
             </div>
@@ -209,7 +209,7 @@
 
             <div class="wrapper">
                 <label for="RSD">Undersized Potato</label>
-                <input type="text" id="gen1Units" name="Undersized Potato" required
+                <input type="number" id="gen1Units" name="Undersized Potato" required
                     placeholder="Enter Undersized Potato" step=".1">
 
             </div>
