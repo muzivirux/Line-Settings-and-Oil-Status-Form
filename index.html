@@ -216,79 +216,67 @@
 
         <h2>Manpower Record</h2>
 
-        <div class="RSD">
-            <div class="wrapper">
-                <label for="RSD">Hopper Area
-                </label>
+<div class="RSD">
+    <div class="wrapper">
+        <label for="hopperArea">Hopper Area</label>
+        <input type="number" id="hopperArea" name="Hopper Area" required placeholder="Enter Hopper Area" min="0">
+    </div>
+    <div class="wrapper">
+        <label for="trimmingConveyor">Trimming Conveyor</label>
+        <input type="number" id="trimmingConveyor" name="Trimming Conveyor" required placeholder="Enter Trimming Conveyor" min="0">
+    </div>
+</div>
 
-                <input type="number" id="gen1Units" name="Hopper Area" required placeholder="Enter Hopper Area" min="0">
+<div class="RSD">
+    <div class="wrapper">
+        <label for="firstInspectionConveyor">1st Inspection Conveyor</label>
+        <input type="number" id="firstInspectionConveyor" name="1st Inspection conveyor" required placeholder="Enter 1st Inspection Conveyor" min="0">
+    </div>
+    <div class="wrapper">
+        <label for="secondInspectionConveyor">2nd Inspection Conveyor</label>
+        <input type="number" id="secondInspectionConveyor" name="2nd Inspection conveyor" required placeholder="Enter 2nd Inspection Conveyor" min="0">
+    </div>
+</div>
 
-            </div>
-            <div class="wrapper">
-                <label for="RSD">Trimming Conveyor
-                </label>
+<div class="RSD">
+    <div class="wrapper">
+        <label for="packing">Packing</label>
+        <input type="number" id="packing" name="Packing" required placeholder="Enter Packing" min="0">
+    </div>
+    <div class="wrapper">
+        <label for="cleaning">Cleaning</label>
+        <input type="number" id="cleaning" name="Cleaning" required placeholder="Enter Cleaning" min="0">
+    </div>
+</div>
 
-                <input type="number" id="gen1Units" name="Trimming Conveyor" required
-                    placeholder="Enter Trimming Convey " min="0">
+<div class="RSD">
+    <div class="wrapper">
+        <label for="hygiene">Hygiene</label>
+        <input type="number" id="hygiene" name="Hygiene" required placeholder="Enter Hygiene" min="0">
+    </div>
+    <div class="wrapper">
+        <label for="labourSupervisor">Labour Supervisor</label>
+        <input type="number" id="labourSupervisor" name="Labour Supervisor" required placeholder="Enter Labour Supervisor" min="0">
+    </div>
+</div>
 
-            </div>
-        </div>
-        <div class="RSD">
-            <div class="wrapper">
-                <label for="RSD">1st Inspection conveyor </label>
-                <input type="number" id="gen1Units" name="1st Inspection conveyor" required
-                    placeholder="Enter 1st Inspection Conveyor " min="0">
+<div class="RSD">
+    <div class="wrapper">
+        <label for="loader">Loader</label>
+        <input type="number" id="loader" name="Loader" required placeholder="Enter Loader" min="0">
+    </div>
+    <div class="wrapper">
+        <label for="other">Other</label>
+        <input type="number" id="other" name="Other" required placeholder="Enter Other" min="0">
+    </div>
+</div>
 
-            </div>
+<label for="totalManpower">Total</label>
+<input type="number" id="totalManpower" name="Total" required placeholder="Enter Total" min="0">
 
-            <div class="wrapper">
-                <label for="RSD">2nd Inspection conveyor </label>
-                <input type="number" id="gen1Units" name="2nd Inspection conveyor" required
-                    placeholder="Enter 2nd Inspection Conveyor" min="0">
+        
 
-            </div>
-        </div>
-        <div class="RSD">
-            <div class="wrapper">
-                <label for="RSD">Packing</label>
-                <input type="number" id="gen1Units" name="Packing" required placeholder="Enter Packing " min="0">
-
-            </div>
-
-            <div class="wrapper">
-                <label for="RSD">Cleaning</label>
-                <input type="number" id="gen1Units" name="Cleaning" required placeholder="Enter Cleaning" min="0">
-
-            </div>
-        </div>
-        <div class="RSD">
-            <div class="wrapper">
-                <label for="RSD">Hygiene</label>
-                <input type="number" id="gen1Units" name="Hygiene" required placeholder="Enter Hygiene " min="0">
-
-            </div>
-
-            <div class="wrapper">
-                <label for="RSD">Labour Supervisor</label>
-                <input type="number" id="gen1Units" name="Labour Supervisor" required
-                    placeholder="Enter Labour Supervisor" min="0">
-
-            </div>
-        </div>
-        <div class="RSD">
-            <div class="wrapper">
-                <label for="RSD">Loader </label>
-                <input type="number" id="gen1Units" name="Loader" required placeholder="Enter Loader" min="0">
-
-            </div>
-
-            <div class="wrapper">
-                <label for="RSD">Other </label>
-                <input type="number" id="gen1Units" name="Other" required placeholder="Enter Other" min="0">
-
-            </div>
-        </div>
-
+           
 
 
         <input type="submit" value="Submit">
@@ -508,5 +496,53 @@
     // Initial update
     updateTotal();
 </script>
+<script>
+    // Get references to the input fields
+    const hopperAreaInput = document.getElementById("hopperArea");
+    const trimmingConveyorInput = document.getElementById("trimmingConveyor");
+    const firstInspectionConveyorInput = document.getElementById("firstInspectionConveyor");
+    const secondInspectionConveyorInput = document.getElementById("secondInspectionConveyor");
+    const packingInput = document.getElementById("packing");
+    const cleaningInput = document.getElementById("cleaning");
+    const hygieneInput = document.getElementById("hygiene");
+    const labourSupervisorInput = document.getElementById("labourSupervisor");
+    const loaderInput = document.getElementById("loader");
+    const otherInput = document.getElementById("other");
+    const totalManpowerInput = document.getElementById("totalManpower");
 
+    // Add an event listener to each input field
+    hopperAreaInput.addEventListener("input", calculateTotal);
+    trimmingConveyorInput.addEventListener("input", calculateTotal);
+    firstInspectionConveyorInput.addEventListener("input", calculateTotal);
+    secondInspectionConveyorInput.addEventListener("input", calculateTotal);
+    packingInput.addEventListener("input", calculateTotal);
+    cleaningInput.addEventListener("input", calculateTotal);
+    hygieneInput.addEventListener("input", calculateTotal);
+    labourSupervisorInput.addEventListener("input", calculateTotal);
+    loaderInput.addEventListener("input", calculateTotal);
+    otherInput.addEventListener("input", calculateTotal);
+
+    // Function to calculate the total
+    function calculateTotal() {
+        // Get the values from the input fields
+        const hopperAreaValue = parseFloat(hopperAreaInput.value) || 0;
+        const trimmingConveyorValue = parseFloat(trimmingConveyorInput.value) || 0;
+        const firstInspectionConveyorValue = parseFloat(firstInspectionConveyorInput.value) || 0;
+        const secondInspectionConveyorValue = parseFloat(secondInspectionConveyorInput.value) || 0;
+        const packingValue = parseFloat(packingInput.value) || 0;
+        const cleaningValue = parseFloat(cleaningInput.value) || 0;
+        const hygieneValue = parseFloat(hygieneInput.value) || 0;
+        const labourSupervisorValue = parseFloat(labourSupervisorInput.value) || 0;
+        const loaderValue = parseFloat(loaderInput.value) || 0;
+        const otherValue = parseFloat(otherInput.value) || 0;
+
+        // Calculate the total
+        const totalManpower = hopperAreaValue + trimmingConveyorValue + firstInspectionConveyorValue +
+            secondInspectionConveyorValue + packingValue + cleaningValue + hygieneValue +
+            labourSupervisorValue + loaderValue + otherValue;
+
+        // Set the total value in the totalManpowerInput field
+        totalManpowerInput.value = totalManpower.toFixed(1);
+    }
+</script>
 </html>
