@@ -70,23 +70,20 @@
         <div class="RSD">
             <div class="wrapper">
                 <label for="RSD">Line Prep Start</label>
-
-                <input type="text" id="gen1Units" name="Line Prep Start" required placeholder="Enter Line Prep Start">
+                <input type="time" id="linePrepStart" name="Line Prep Start" required placeholder="Enter Line Prep Start">
             </div>
-
-
+        
             <div class="wrapper">
                 <label for="RSD">Line Prep Complete</label>
-                <input type="text" id="gen1diesel" name="Line Prep Complete" required
-                    placeholder="Enter Line Prep Complete">
+                <input type="time" id="linePrepComplete" name="Line Prep Complete" required placeholder="Enter Line Prep Complete">
             </div>
+        
             <div class="wrapper">
-                <label for="RSD">Startup Time</label>
-
-                <input type="time" id="gen1Units" name="Startup Time" required placeholder="Enter Startup Time">
+                <label for="RSD">Total Prep Time</label>
+                <input type="text" id="totalPrepTime" name="Total Prep Time" required placeholder="Total Prep Time" readonly>
             </div>
-
         </div>
+        
 
 
         <h2>Process Waste</h2>
@@ -100,18 +97,22 @@
                     placeholder="Enter Trimming Table (kg)" min="0" step=".1">
             </div>
             <div class="wrapper">
-                <label for="finalInspection">Final Inspection (kg)</label>
-                <input type="number" id="finalInspection" name="Final Inspection (kg)" required
-                    placeholder="Enter Final Inspection (kg)" min="0" step=".1">
-            </div>
-        </div>
-            <div class="wrapper">
-                <label for="firstInspection">1st Inspection (kg) / Sliver remover (kg)</label>
+                <label for="firstInspection">1st Inspection / Sliver remover (kg)</label>
                 <input type="number" id="firstInspection" name="1st Inspection (kg) / Sliver remover (kg)" required
                     placeholder="Enter 1st Inspection (kg)/Sliver remover (kg)" min="0" step=".1">
-            </div>
+            
         </div>
+           
+       
+        </div>
+           
         <div class="wrapper">
+             
+        <div class="wrapper">
+            <label for="finalInspection">Final Inspection (kg)</label>
+            <input type="number" id="finalInspection" name="Final Inspection (kg)" required
+                placeholder="Enter Final Inspection (kg)" min="0" step=".1">
+        </div>
             <label for="total">Total (kg)</label>
             <input type="number" id="total" name="Total (kg)" required placeholder="Enter Total (kg)" min="0" step=".1">
         </div>
@@ -471,7 +472,33 @@
             labourSupervisorValue + loaderValue + otherValue;
 
         // Set the total value in the totalManpowerInput field
-        totalManpowerInput.value = totalManpower.toFixed(1);
+        totalManpowerInput.value = totalManpower.toFixed(0);
     }
+
+// Get the input elements
+const linePrepStartInput = document.getElementById('linePrepStart');
+const linePrepCompleteInput = document.getElementById('linePrepComplete');
+const totalPrepTimeInput = document.getElementById('totalPrepTime');
+
+// Calculate the time difference automatically
+linePrepStartInput.addEventListener('input', updateTotalPrepTime);
+linePrepCompleteInput.addEventListener('input', updateTotalPrepTime);
+
+function updateTotalPrepTime() {
+    const startTime = new Date('2023-01-01 ' + (linePrepStartInput.value || '00:00'));
+    const completeTime = new Date('2023-01-01 ' + (linePrepCompleteInput.value || '00:00'));
+
+    if (startTime && completeTime && completeTime > startTime) {
+        const diffInMilliseconds = completeTime - startTime;
+        const diffTime = new Date(diffInMilliseconds);
+
+        const formattedHours = String(diffTime.getUTCHours()).padStart(2, '0');
+        const formattedMinutes = String(diffTime.getUTCMinutes()).padStart(2, '0');
+
+        totalPrepTimeInput.value = `${formattedHours}:${formattedMinutes}`;
+    } else {
+        totalPrepTimeInput.value = ''; // If invalid or no time set, clear the Total Prep Time field
+    }
+}
 </script>
 </html>
