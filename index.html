@@ -29,7 +29,7 @@
             <div class="wrapper">
                 <label for="RSD">Shift</label>
                 <div class="input1" style="display: flex; gap: .1rem;">
-                    <input type="time" required min="0" id="wapdaoffpeakend" name="Shift" required placeholder="HH:MM"
+                    <input type="text" required id="wapdaoffpeakend" class="time-input" name="Shift" placeholder="HH:MM"
                         style="width: 60%;">
                     <label for="RSD"></label>
                     <select id="Shift" name="Shift(code)" style="width: 40%;">
@@ -398,7 +398,12 @@
             }
         });
     </script>
+    
    <script>
+  
+
+
+
     // Get references to the input fields
     const trimmingTableInput = document.getElementById("trimmingTable");
     const finalInspectionInput = document.getElementById("finalInspection");
@@ -501,4 +506,69 @@ function updateTotalPrepTime() {
     }
 }
 </script>
+
+    
+<script>
+    // Function to validate the duration input
+    function validateDurationInput(inputElement) {
+      inputElement.addEventListener("change", function () {
+        inputElement.setCustomValidity("");
+        var value = inputElement.value;
+        var timeParts = value.split(":");
+
+        // Check if the input is in the format HH:MM or HH
+        if (timeParts.length === 2) {
+          var hours = parseInt(timeParts[0]);
+          var minutes = parseInt(timeParts[1]);
+
+          if (
+            isNaN(hours) ||
+            isNaN(minutes) ||
+            hours > 24 ||
+            (hours === 24 && minutes !== 0) ||
+            minutes >= 60
+          ) {
+            inputElement.setCustomValidity(
+              "Please enter a valid duration in HH:MM format with hours under 24 and minutes under 60."
+            );
+          }
+        } else if (timeParts.length === 1) {
+          var hoursOnly = parseInt(timeParts[0]);
+
+          if (isNaN(hoursOnly) || hoursOnly > 24) {
+            inputElement.setCustomValidity(
+              "Please enter a valid duration in HH:MM format with hours under 24."
+            );
+          }
+        } else {
+          inputElement.setCustomValidity(
+            "Please enter a valid duration in HH:MM format or hours only."
+          );
+        }
+      });
+    }
+
+    // Get the input elements and validate them
+    var durationInputs = document.querySelectorAll(".time-input");
+    durationInputs.forEach(function (input) {
+      validateDurationInput(input);
+    });
+
+    // auto add colon : between HH and MM
+    document.addEventListener("DOMContentLoaded", function () {
+      const timeInputs = document.querySelectorAll(".time-input");
+
+      timeInputs.forEach(function (inputElement) {
+        inputElement.addEventListener("input", function (event) {
+          const inputValue = event.target.value.trim();
+
+          // Check if the input value has reached 2 characters (HH)
+          if (inputValue.length === 2 && !inputValue.includes(":")) {
+            // Add the colon ':' after the HH part
+            event.target.value = inputValue + ":";
+          }
+        });
+      });
+    });
+  </script>
 </html>
