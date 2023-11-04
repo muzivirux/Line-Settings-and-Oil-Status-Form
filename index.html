@@ -51,19 +51,20 @@
         <div class="RSD">
             <div class="wrapper">
                 <label for="RSD">Document No</label>
-                <input type="text" required min="0" id="wapdatotal" name="Document No" required
-                    placeholder="Enter Document No">
+                <input type="text" min="0" id="wapdatotal" name="Document No" readonly
+                    value="RFF/PRD/RF-01" tabindex="-1">
             </div>
 
-            <div class="wrapper">
-                <label for="RSD">Line Supervisor's name</label>
-                <input type="text" id="wapdaoffpeakend" name="Line Supervisor" required placeholder='Enter name'>
-            </div>
             <div class="wrapper">
                 <label for="RSD">Junior Manager</label>
                 <input type="text" id="wapdatotalend" name="Junior Manager" required placeholder="Enter name">
             </div>
         </div>
+        <div class="wrapper">
+            <label for="RSD">Line Supervisor's name</label>
+            <textarea type="text" id="wapdaoffpeakend" name="Line Supervisor" required placeholder='Enter names separated by comma' rows="1"></textarea>
+        </div>
+        
 
         <!-- third three -->
         <h2>Line Setting</h2>
@@ -71,13 +72,13 @@
             <div class="wrapper">
                 <label for="RSD">Line Prep Start</label>
 
-                <input type="text" id="gen1Units" name="Line Prep Start" required placeholder="Enter Line Prep Start">
+                <input type="text" id="gen1Units" class="time-input" name="Line Prep Start" required placeholder="Enter Line Prep Start">
             </div>
 
 
             <div class="wrapper">
                 <label for="RSD">Line Prep Complete</label>
-                <input type="text" id="gen1diesel" name="Line Prep Complete" required
+                <input type="text" id="gen1diesel" class="time-input" name="Line Prep Complete" required
                     placeholder="Enter Line Prep Complete">
             </div>
             <div class="wrapper">
