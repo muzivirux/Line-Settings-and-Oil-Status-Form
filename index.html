@@ -97,28 +97,30 @@
             <div class="wrapper">
                 <label for="trimmingTable">Trimming Table (kg)</label>
                 <input type="number" id="trimmingTable" name="Trimming Table (kg)" required
-                    placeholder="Enter Trimming Table (kg)" min="0" step=".1">
+                    placeholder="Enter Trimming Table (kg)" min="0" >
             </div>
             <div class="wrapper">
-                <label for="firstInspection">1st Inspection / Sliver remover (kg)</label>
-                <input type="number" id="firstInspection" name="1st Inspection (kg) / Sliver remover (kg)" required
-                    placeholder="Enter 1st Inspection (kg)/Sliver remover (kg)" min="0" step=".1">
-            
+                <label for="firstInspection">1st Inspection</label>
+                <input type="number" id="firstInspection" name="1st Inspection (kg)" required
+                    placeholder="Enter 1st Inspection (kg)" min="0" ">            
+        </div>      
         </div>
-           
-       
-        </div>
-           
-        <div class="wrapper">
+        <div class="RSD">
+            <div class="wrapper">
+                <label for="sliverRemover">Sliver remover (kg)</label>
+                <input type="number" id="sliverRemover" name="Sliver remover (kg)" required
+                    placeholder="Enter Sliver remover (kg)" min="0" ">            
+        </div>  
              
         <div class="wrapper">
             <label for="finalInspection">Final Inspection (kg)</label>
             <input type="number" id="finalInspection" name="Final Inspection (kg)" required
-                placeholder="Enter Final Inspection (kg)" min="0" step=".1">
+                placeholder="Enter Final Inspection (kg)" min="0" ">
+        </div>
         </div>
             <label for="total">Total (kg)</label>
-            <input type="number" id="total" name="Total (kg)" required placeholder="Enter Total (kg)" min="0" step=".1">
-        </div>
+            <input type="number" id="total" name="Total (kg)" required placeholder="Enter Total (kg)" min="0" >
+        
 
         <h2>Hopper Waste</h2>
         <div class="RSD">
@@ -345,6 +347,7 @@
     const trimmingTableInput = document.getElementById("trimmingTable");
     const finalInspectionInput = document.getElementById("finalInspection");
     const firstInspectionInput = document.getElementById("firstInspection");
+    const sliverRemoverInput = document.getElementById("sliverRemover");
     const totalInput = document.getElementById("total");
 
     // Function to update the total field
@@ -352,9 +355,10 @@
         const trimmingTableValue = parseFloat(trimmingTableInput.value) || 0;
         const finalInspectionValue = parseFloat(finalInspectionInput.value) || 0;
         const firstInspectionValue = parseFloat(firstInspectionInput.value) || 0;
+        const sliverRemoverValue= parseFloat(sliverRemoverInput.value) || 0;
 
         // Calculate the total
-        const totalValue = trimmingTableValue + finalInspectionValue + firstInspectionValue;
+        const totalValue = trimmingTableValue + firstInspectionValue + sliverRemoverValue + finalInspectionValue; 
 
         // Update the total input field
         totalInput.value = totalValue.toFixed(0); // Round to one decimal place
@@ -364,7 +368,7 @@
     trimmingTableInput.addEventListener("input", updateTotal);
     finalInspectionInput.addEventListener("input", updateTotal);
     firstInspectionInput.addEventListener("input", updateTotal);
-
+    sliverRemoverInput.addEventListener("input", updateTotal);
     // Initial update
     updateTotal();
 </script>
