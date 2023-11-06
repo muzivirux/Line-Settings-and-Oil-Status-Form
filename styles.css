@@ -13,7 +13,7 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #f8c80798;
+  /* background-color: #f8c80798; */
   clip-path: ellipse(50% 30% at 50% 0%);
   animation: bgAnimation 1s forwards;
   z-index: -1;
@@ -43,10 +43,10 @@ h1 {
   margin-top: 8rem;
 }
 
-h2{
+h2 {
   margin-top: 1rem;
 }
-h3{
+h3 {
   padding-top: 1rem;
 }
 
@@ -89,7 +89,6 @@ textarea {
   color: #1a1a1a;
   background-color: #f8c807;
   margin-top: 2px;
-  
 }
 
 #phone {
@@ -116,9 +115,9 @@ input[type="submit"]:hover {
   color: #e88228;
 }
 
-.RSD{
+.RSD {
   display: flex;
-gap: 1rem;  
+  gap: 1rem;
 }
 /* dropdown */
 
@@ -380,6 +379,4 @@ li.selected {
   #locationBtn {
     font-size: 1rem;
   }
-
 }
-
