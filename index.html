@@ -72,12 +72,12 @@
             <div class="wrapper">
                 <label for="RSD">Line Prep Start</label>
 
-                <input type="text" id="gen1Units" class="time-input" name="Line Prep Start" required placeholder="Enter Line Prep Start">
+                <input type="time" id="linePrepStart" class="time-input" name="Line Prep Start" required placeholder="Enter Line Prep Start">
             </div>
         
             <div class="wrapper">
                 <label for="RSD">Line Prep Complete</label>
-                <input type="text" id="gen1diesel" class="time-input" name="Line Prep Complete" required
+                <input type="time" id="linePrepComplete" class="time-input" name="Line Prep Complete" required
                     placeholder="Enter Line Prep Complete">
             </div>
         
@@ -334,73 +334,7 @@
             }
         });
     </script>
-    <script>
-        const cutSizeSelect = document.getElementById("CutSize");
-        const sizeChangeSelect = document.getElementById("SizeChange");
-        const bladesReplacedSelect = document.getElementById("BladesReplaced");
-        const bladesDetailsDiv = document.getElementById("BladesDetails");
-        const bladeTypeQuantityDiv = document.getElementById("BladeTypeQuantity");
-        const timeInput = document.getElementById("Time");
-        const bladeCodeInput = document.getElementById("BladeCode");
-        const bladeTypeInput = document.getElementById("BladeType");
-        const quantityInput = document.getElementById("Quantity");
-
-        // Function to toggle the 'required' attribute based on visibility
-        function toggleRequired(element, isVisible) {
-            if (isVisible) {
-                element.setAttribute("required", "required");
-            } else {
-                element.removeAttribute("required");
-            }
-        }
-
-        cutSizeSelect.addEventListener("change", () => {
-            if (cutSizeSelect.value !== "6x6 mm") {
-                // Show next elements
-                bladesDetailsDiv.style.display = "block";
-                bladeTypeQuantityDiv.style.display = "block";
-                toggleRequired(timeInput, true);
-                toggleRequired(bladeCodeInput, true);
-                toggleRequired(bladeTypeInput, true);
-                toggleRequired(quantityInput, true);
-            } else {
-                // Hide next elements
-                bladesDetailsDiv.style.display = "none";
-                bladeTypeQuantityDiv.style.display = "none";
-                toggleRequired(timeInput, false);
-                toggleRequired(bladeCodeInput, false);
-                toggleRequired(bladeTypeInput, false);
-                toggleRequired(quantityInput, false);
-            }
-        });
-
-        sizeChangeSelect.addEventListener("change", () => {
-            if (sizeChangeSelect.value === "Yes") {
-                // Change both sizes during shift
-                // You can implement this logic as needed
-            }
-        });
-
-        bladesReplacedSelect.addEventListener("change", () => {
-            if (bladesReplacedSelect.value === "Yes") {
-                // Show the details for cutter blades replaced
-                bladesDetailsDiv.style.display = "block";
-                bladeTypeQuantityDiv.style.display = "block";
-                toggleRequired(timeInput, true);
-                toggleRequired(bladeCodeInput, true);
-                toggleRequired(bladeTypeInput, true);
-                toggleRequired(quantityInput, true);
-            } else {
-                // Hide the details if blades were not replaced
-                bladesDetailsDiv.style.display = "none";
-                bladeTypeQuantityDiv.style.display = "none";
-                toggleRequired(timeInput, false);
-                toggleRequired(bladeCodeInput, false);
-                toggleRequired(bladeTypeInput, false);
-                toggleRequired(quantityInput, false);
-            }
-        });
-    </script>
+    
     
    <script>
   
@@ -511,67 +445,5 @@ function updateTotalPrepTime() {
 </script>
 
     
-<script>
-    // Function to validate the duration input
-    function validateDurationInput(inputElement) {
-      inputElement.addEventListener("change", function () {
-        inputElement.setCustomValidity("");
-        var value = inputElement.value;
-        var timeParts = value.split(":");
 
-        // Check if the input is in the format HH:MM or HH
-        if (timeParts.length === 2) {
-          var hours = parseInt(timeParts[0]);
-          var minutes = parseInt(timeParts[1]);
-
-          if (
-            isNaN(hours) ||
-            isNaN(minutes) ||
-            hours > 24 ||
-            (hours === 24 && minutes !== 0) ||
-            minutes >= 60
-          ) {
-            inputElement.setCustomValidity(
-              "Please enter a valid duration in HH:MM format with hours under 24 and minutes under 60."
-            );
-          }
-        } else if (timeParts.length === 1) {
-          var hoursOnly = parseInt(timeParts[0]);
-
-          if (isNaN(hoursOnly) || hoursOnly > 24) {
-            inputElement.setCustomValidity(
-              "Please enter a valid duration in HH:MM format with hours under 24."
-            );
-          }
-        } else {
-          inputElement.setCustomValidity(
-            "Please enter a valid duration in HH:MM format or hours only."
-          );
-        }
-      });
-    }
-
-    // Get the input elements and validate them
-    var durationInputs = document.querySelectorAll(".time-input");
-    durationInputs.forEach(function (input) {
-      validateDurationInput(input);
-    });
-
-    // auto add colon : between HH and MM
-    document.addEventListener("DOMContentLoaded", function () {
-      const timeInputs = document.querySelectorAll(".time-input");
-
-      timeInputs.forEach(function (inputElement) {
-        inputElement.addEventListener("input", function (event) {
-          const inputValue = event.target.value.trim();
-
-          // Check if the input value has reached 2 characters (HH)
-          if (inputValue.length === 2 && !inputValue.includes(":")) {
-            // Add the colon ':' after the HH part
-            event.target.value = inputValue + ":";
-          }
-        });
-      });
-    });
-  </script>
 </html>
