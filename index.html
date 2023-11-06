@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" href="./images/favico.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
 </head>
 
 <body>
@@ -29,12 +30,13 @@
             <div class="wrapper">
                 <label for="RSD">Shift</label>
                 <div class="input1" style="display: flex; gap: .1rem;">
-                    <input type="text" required id="wapdaoffpeakend" class="time-input" name="Shift" placeholder="HH:MM"
-                        style="width: 60%;">
+                    <input type="text" id="shiftTime" class="time-input" name="Shift" placeholder="HH:MM" readonly tabindex="-1"
+                        style="width: 50%;">
                     <label for="RSD"></label>
-                    <select id="Shift" name="Shift(code)" style="width: 40%;">
+                    <select id="Shift" name="Shift(code)" style="width: 50%;">
+                        <option value="">Select Shift</option>
                         <option value="M">Morning</option>
-                        <option value="E">Evening</option>
+                        <option value="E">Evening</option>  
                         <!-- <option value="N">Night</option> -->
 
                     </select>
@@ -102,20 +104,20 @@
             <div class="wrapper">
                 <label for="firstInspection">1st Inspection</label>
                 <input type="number" id="firstInspection" name="1st Inspection (kg)" required
-                    placeholder="Enter 1st Inspection (kg)" min="0" ">            
+                    placeholder="Enter 1st Inspection (kg)" min="0" >            
         </div>      
         </div>
         <div class="RSD">
             <div class="wrapper">
                 <label for="sliverRemover">Sliver remover (kg)</label>
                 <input type="number" id="sliverRemover" name="Sliver remover (kg)" required
-                    placeholder="Enter Sliver remover (kg)" min="0" ">            
+                    placeholder="Enter Sliver remover (kg)" min="0" >            
         </div>  
              
         <div class="wrapper">
             <label for="finalInspection">Final Inspection (kg)</label>
             <input type="number" id="finalInspection" name="Final Inspection (kg)" required
-                placeholder="Enter Final Inspection (kg)" min="0" ">
+                placeholder="Enter Final Inspection (kg)" min="0" >
         </div>
         </div>
             <label for="total">Total (kg)</label>
@@ -447,7 +449,8 @@ function updateTotalPrepTime() {
     }
 }
 </script>
+<script src="script.js"></script>
 
     
-
+</body>
 </html>
