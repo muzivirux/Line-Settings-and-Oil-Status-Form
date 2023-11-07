@@ -71,8 +71,8 @@
            
                 <div class="wrapper">
                     <label for="RSD">Revision Date</label>
-                    <input type="date" min="0" id="wapdatotal" name="Revision Date" 
-                      placeholder="Revision Date"  >
+                    <input type="date" min="0" id="wapdatotal" name="Revision Date"  
+                      placeholder="Revision Date" required >
                 </div>
             </div>
         <div class="wrapper">
@@ -449,7 +449,7 @@ function updateTotalPrepTime() {
     const startTime = new Date('2023-01-01 ' + (linePrepStartInput.value || '00:00'));
     const completeTime = new Date('2023-01-01 ' + (linePrepCompleteInput.value || '00:00'));
 
-    if (startTime && completeTime && completeTime > startTime) {
+    if (startTime && completeTime > startTime) {
         const diffInMilliseconds = completeTime - startTime;
         const diffTime = new Date(diffInMilliseconds);
 
