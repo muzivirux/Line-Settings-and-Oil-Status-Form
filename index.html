@@ -33,7 +33,7 @@
                     <input type="text" id="shiftTime" class="time-input" name="Shift" placeholder="HH:MM" readonly tabindex="-1"
                         style="width: 50%;">
                     <label for="RSD"></label>
-                    <select id="Shift" name="Shift(code)" style="width: 50%;">
+                    <select id="Shift" name="Shift(code)" style="width: 50%;" required>
                         <option value="">Select Shift</option>
                         <option value="M">Morning</option>
                         <option value="E">Evening</option>  
@@ -46,7 +46,7 @@
 
             <div class="wrapper">
                 <label for="RSD">Date</label>
-                <input type="date" required min="0" id="wapdatotal" name="date" required placeholder="Enter Date">
+                <input type="date" required min="0" id="wapdatotal" name="date" placeholder="Enter Date">
             </div>
         </div>
 
@@ -54,7 +54,7 @@
             <div class="wrapper">
                 <label for="RSD">Document No</label>
                 <input type="text" min="0" id="wapdatotal" name="Document No" readonly
-                    value="RFF/PRD/RF-01" tabindex="-1">
+                    value="RFF/PRD/RF-01">
             </div>
 
             <div class="wrapper">
@@ -66,13 +66,13 @@
             <div class="wrapper">
                 <label for="RSD">Revision No</label>
                 <input type="text" min="0" id="wapdatotal" name="Revision No"
-               value="00-00" tabindex="-1">
+               value="00-00">
             </div>
            
                 <div class="wrapper">
                     <label for="RSD">Revision Date</label>
                     <input type="date" min="0" id="wapdatotal" name="Revision Date"  
-                      placeholder="Revision Date" required >
+                      placeholder="Revision Date" >
                 </div>
             </div>
         <div class="wrapper">
